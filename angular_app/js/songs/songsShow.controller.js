@@ -4,10 +4,10 @@
 
   angular
   .module('songs')
-  .controller('songsShowController', ["SongsKitchen"]);
+  .controller('songsShowController', ["SongsKitchen", "$stateParams", SongsShowFunction]);
 
-  function songsShowController(){
-
+  function SongsShowFunction(SongsKitchen, $stateParams){
+    this.song = SongsKitchen.get({id: $stateParams.id})
   }
 
 }());

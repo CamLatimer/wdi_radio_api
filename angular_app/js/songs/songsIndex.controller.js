@@ -4,10 +4,10 @@
 
   angular
   .module('songs')
-  .controller('songsIndexController', ["SongsKitchen", songsIndexControllerFunction]);
+  .controller('songsIndexController', ["SongsKitchen", SongsIndexControllerFunction]);
 
-  function songsIndexControllerFunction(){
-
+  function SongsIndexControllerFunction(SongsKitchen){
+    this.songs = SongsKitchen.query();
   }
 
 }());
