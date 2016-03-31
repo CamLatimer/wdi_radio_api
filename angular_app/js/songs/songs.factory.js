@@ -4,16 +4,16 @@
 
   angular
   .module('songs')
-  .factory('SongsFactory', [
+  .factory('SongsKitchen', [
     '$resource',
-    SongsKitchen
+    SongsCooker
   ]);
 
-  function SongsKitchen($resource){
+  function SongsCooker($resource){
     return("http://localhost:3000/grumbles/:id", {}, {
       update: {method: "PUT"}
     });
-    
+
   }
 
 }());

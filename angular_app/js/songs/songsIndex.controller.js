@@ -4,10 +4,10 @@
 
   angular
   .module('songs')
-  .controller('songsIndexController', [songsIndexControllerFunction]);
+  .controller('songsIndexController', ["SongsKitchen", songsIndexControllerFunction]);
 
   function songsIndexControllerFunction(){
-    
+
   }
 
 }());
